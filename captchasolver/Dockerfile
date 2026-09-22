@@ -3,6 +3,7 @@ RUN apt-get update && apt-get install -y libopencv-core406 libopencv-imgproc406 
 RUN mkdir -p /app/darknet
 WORKDIR /app
 COPY darknet/ /app/darknet/
+RUN chmod +x /app/darknet/darknet
 COPY package*.json /app
 COPY index.js /app
 RUN npm i
