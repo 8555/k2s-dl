@@ -2,12 +2,14 @@ services:
   captchasolver:
     build: ./captchasolver
     restart: unless-stopped
+    init: true
     ports:
       - "9955:9955"
 
   downloader:
     build: ./downloader
     restart: unless-stopped
+    init: true
     depends_on:
       - captchasolver
     network_mode: host
