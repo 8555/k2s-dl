@@ -1,3 +1,5 @@
+name: k2s-dl
+
 services:
   captchasolver:
     build: ./captchasolver
