@@ -3,7 +3,7 @@ name: k2s-dl
 services:
   captchasolver:
     build: ./captchasolver
-    container_name: captchasolver
+    container_name: k2s-captchasolver
     restart: unless-stopped
     init: true
     ports:
@@ -11,7 +11,7 @@ services:
 
   downloader:
     build: ./downloader
-    container_name: downloader
+    container_name: k2s-downloader
     restart: unless-stopped
     init: true
     user: "1000:1000"
